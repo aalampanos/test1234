@@ -15,5 +15,6 @@ jobs:
           destination_branch: "dev"
           pr_title: "Pulling ${{ github.ref }} into dev"
           pr_body: "crown: *An automated PR*"
-             
+          pr_allow_empty: true 
+          pr_draft: false     
 
