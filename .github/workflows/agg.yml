@@ -16,8 +16,9 @@ jobs:
       - name: Github Pull Request
         uses: repo-sync/pull-request@master
         with:
-          commit-message: scheduler pr from dev to main
-          base: main
-          labels: automated-pr,
-          branch: dev
-          delete-branch: false
+          source_branch: "main"
+          estination_branch: "dev"
+          pr_title: "Pulling ${{ github.ref }} into master"
+          pr_body: "crown: *An automated PR*"
+             
+
