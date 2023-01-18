@@ -1,0 +1,18 @@
+name: PR from DEV to MAIN
+on:
+  schedule:
+    - cron: "* * * * *"
+jobs:
+  CloudList:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: scheduler pr from dev to main
+          base: main
+          labels: automated-pr,
+          branch: dev
+          delete-branch: false
