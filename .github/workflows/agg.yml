@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+      - name: Github Pull Request
+        uses: repo-sync/pull-request@master
         with:
           commit-message: scheduler pr from dev to main
           base: main
