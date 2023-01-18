@@ -1,7 +1,7 @@
 name: PR from DEV to MAIN
 on:
   schedule:
-  - cron: "* * * * *"
+  - cron: '*/5 * * * *'
 jobs:
   CloudList:
     runs-on: ubuntu-latest
